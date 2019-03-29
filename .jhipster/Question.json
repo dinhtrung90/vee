@@ -1,0 +1,42 @@
+{
+    "name": "Question",
+    "fields": [
+        {
+            "fieldName": "text",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updated",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "questionType",
+            "otherEntityRelationshipName": "question",
+            "relationshipName": "questionType"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "responseChoice",
+            "otherEntityRelationshipName": "question",
+            "relationshipName": "responseChoice"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "veeResponse",
+            "otherEntityRelationshipName": "question",
+            "relationshipName": "res"
+        }
+    ],
+    "changelogDate": "20190329074647",
+    "entityTableName": "question",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

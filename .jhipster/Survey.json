@@ -1,0 +1,48 @@
+{
+    "name": "Survey",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updated",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "openingtime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "closingtime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "questionOrder",
+            "otherEntityRelationshipName": "survey",
+            "relationshipName": "questionOrder"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "surveyResponse",
+            "otherEntityRelationshipName": "survey",
+            "relationshipName": "surveyResponse"
+        }
+    ],
+    "changelogDate": "20190329074645",
+    "entityTableName": "survey",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
