@@ -1,0 +1,33 @@
+{
+    "name": "QuestionOrder",
+    "fields": [
+        {
+            "fieldName": "order",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "survey",
+            "otherEntityName": "survey",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "question",
+            "otherEntityRelationshipName": "questionOrder",
+            "relationshipName": "questionOrder",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190329074646",
+    "entityTableName": "question_order",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

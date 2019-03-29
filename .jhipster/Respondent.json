@@ -1,0 +1,53 @@
+{
+    "name": "Respondent",
+    "fields": [
+        {
+            "fieldName": "avatarUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birthDay",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "Gender",
+            "fieldValues": "Male,Female"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "respondent",
+            "relationshipName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "veeResponse",
+            "otherEntityRelationshipName": "respondent",
+            "relationshipName": "res"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "surveyResponse",
+            "otherEntityRelationshipName": "respondent",
+            "relationshipName": "surveyResponse"
+        }
+    ],
+    "changelogDate": "20190329074652",
+    "entityTableName": "respondent",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
