@@ -1,0 +1,68 @@
+
+entity Survey {
+	name String,
+	description String,
+	updated Instant,
+	openingtime Instant,
+	closingtime Instant
+}
+
+entity QuestionOrder {
+	order Integer
+}
+
+entity Question {
+	text String,
+	updated Instant
+}
+
+entity QuestionType {
+	name String
+}
+
+entity ResponseChoice {
+	text String
+}
+
+entity VeeResponse {
+	answer String
+}
+
+entity SurveyResponse {
+	updated Instant,
+	startedat Instant,
+	completedat Instant
+}
+
+enum Gender {
+    Male, Female
+}
+
+
+relationship OneToMany {
+	Question{questionType} to QuestionType,
+	Question{responseChoice} to ResponseChoice,
+	Question{res} to VeeResponse,
+	Survey{questionOrder} to QuestionOrder,
+	Survey{surveyResponse} to SurveyResponse,
+	Respondent{res} to VeeResponse,
+	Respondent{surveyResponse} to SurveyResponse
+}
+
+entity Respondent {
+	avatarUrl String,
+    email String,
+    birthDay Instant,
+    gender Gender
+}
+
+relationship OneToOne {
+    Respondent{user} to User
+}
+relationship ManyToOne{
+    QuestionOrder{questionOrder} to Question
+}
+dto * with mapstruct except QuestionOrder
+service all with serviceImpl
+paginate Survey, Question, SurveyResponse with pagination
+
