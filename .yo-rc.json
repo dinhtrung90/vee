@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "vee",
+    "packageName": "com.vts.vee",
+    "packageFolder": "com/vts/vee",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "enableSwaggerCodegen": "true",
+    "messageBroker": "kafka",
+    "buildTool": "gradle",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "react",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.8.2",
+    "jwtSecretKey": "MzJjMjQ4YjI4NWM3NTJiZDVmMmUzNTdkMGQ0YTZiZDdlYzkwZTY1ZTgzMjAxZjk1YjBmM2IyNjFiMTMwMmU5NWQ0YzNmZDYxMjNhOTc2YTU4MTYwZTE5ZWQ3MzU2Mjk3OWI4NjBlNjVhNWM1Y2U2NWQwODQ2YzdiMzhmZTg1ZDQ=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "dinhtrung90",
+  "repository-name": "vee"
+}
